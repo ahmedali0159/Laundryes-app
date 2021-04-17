@@ -1,6 +1,7 @@
 import React from 'react';
 import Blog from '../Blog/Blog';
 import Featured from '../Featured/Featured';
+import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import Service from '../Service/Service';
 import Testimonial from '../Testimonial/Testimonial';
@@ -13,6 +14,7 @@ const Home = () => {
             <Featured></Featured>
             <Testimonial></Testimonial>
             <Blog></Blog>
+            <Footer></Footer>
         </div>
     );
 };

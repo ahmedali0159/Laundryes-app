@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { UserContext } from '../../../App';
 import logo from '../../../images/logo_blue.png';
 
 const Navbar = () => {
+  const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     return (
         <nav className="navbar navbar-expand-lg navbar-light  ">
         <div className="container-fluid">
@@ -18,23 +20,23 @@ const Navbar = () => {
                 <Link to="/" className="nav-link  text-darkColor" aria-current="page">Home</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link text-darkColor">Services</Link>
+                <Link to="/services" className="nav-link text-darkColor">Services</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link text-darkColor">Book Now</Link>
+                <Link to="/bookNow" className="nav-link text-darkColor">Book Now</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link text-darkColor">Testimonials</Link>
+                <Link to="/testimonials" className="nav-link text-darkColor">Testimonials</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link text-darkColor">Our Blog</Link>
+                <Link to="/dashboard" className="nav-link text-darkColor">Dashboard</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link text-darkColor">Admin</Link>
+                <Link to="/admin" className="nav-link text-darkColor">Admin</Link>
               </li>
               <li className="nav-item">
-                <Link to="/login" className="nav-link button-color" >Login</Link>
-              </li>
+              <button className="button-color"> <Link style={{textDecoration:"none"}} to="login" >{loggedInUser.email ? loggedInUser.name|| loggedInUser.email : "Login"}</Link></button>    
+               </li>
             </ul>
           </div>
         </div>
