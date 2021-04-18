@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Sidebar from '../../Dashboard/Sidebar/Sidebar';
 
 
 
@@ -7,6 +8,7 @@ const ServiceInfo = (props) => {
     const {name, imageURL, price, _id} = props.service;
     return (
       <Link to={`/orderplace/${_id}`} style={{textDecoration:"none"}} className="col-md-4">
+          <Sidebar></Sidebar>
       <div className=" mb-5">
 
           <div className="card p-3">

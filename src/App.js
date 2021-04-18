@@ -11,7 +11,6 @@ import AddService from "./components/AddService/AddService";
 import Dashboard from "./components/Dashboard/Dashboard/Dashboard";
 import Home from './components/Home/Home/Home';
 import Navbar from "./components/Home/Navbar/Navbar";
-import Service from "./components/Home/Service/Service";
 import Login from './components/Login/Login/Login';
 import PrivateRoute from "./components/Login/PrivateRoute/PrivateRoute";
 
@@ -49,7 +48,7 @@ function App() {
           <Route path="/addreview">
             <AddReview></AddReview>
           </Route>
-          <PrivateRoute path="/orderplace/:_id">
+          <PrivateRoute path="/orderplace/:id">
            <OrderPlace></OrderPlace>
           </PrivateRoute>
           <Route path="*">
