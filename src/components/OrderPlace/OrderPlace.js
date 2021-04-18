@@ -8,7 +8,7 @@ const OrderPlace = () => {
     console.log(service);
 
     useEffect(()=> {
-        fetch(`http://localhost:5000/service/${_id}`)
+        fetch(`https://damp-dawn-17612.herokuapp.com/service/${_id}`)
         .then(res => res.json())
         .then(data => console.log(data[0]));
     }, [_id])

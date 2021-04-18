@@ -15,7 +15,7 @@ const AddReview = () => {
                 customer:review.customer,
                 opinion:review.opinion,
             }
-            const url = (`http://localhost:5000/addreview`);
+            const url = (`https://damp-dawn-17612.herokuapp.com/addreview`);
             console.log(reviewData);
             fetch(url, {
               method:"POST",

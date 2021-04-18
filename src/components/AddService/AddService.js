@@ -13,7 +13,7 @@ const AddService = () => {
                 imageURL: imageURL,
                 price:service.price
             }
-            const url = (`http://localhost:5000/addservice`);
+            const url = (`https://damp-dawn-17612.herokuapp.com/addservice`);
         console.log(serviceData);
         fetch(url, {
           method:"POST",
