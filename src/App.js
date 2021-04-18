@@ -6,6 +6,7 @@ import {
   Route,
 } from "react-router-dom";
 import './App.css';
+import AddReview from "./components/AddReview/AddReview";
 import AddService from "./components/AddService/AddService";
 import Dashboard from "./components/Dashboard/Dashboard/Dashboard";
 import Home from './components/Home/Home/Home';
@@ -15,6 +16,7 @@ import Login from './components/Login/Login/Login';
 import PrivateRoute from "./components/Login/PrivateRoute/PrivateRoute";
 
 import NotFound from "./components/NotFound/NotFound";
+import OrderPlace from "./components/OrderPlace/OrderPlace";
 
 
 
@@ -33,20 +35,23 @@ function App() {
           </Route>
           <Route path='/home'>
           <Home/>
-          </Route>
-          <PrivateRoute path="/services">
-            <Service></Service>
-          </PrivateRoute>
+          </Route> 
           <Route path="/login">
             <Navbar></Navbar>
             <Login></Login>
           </Route>
-          <Route path="/dashboard">
+          <PrivateRoute path="/dashboard">
             <Dashboard></Dashboard>
-          </Route>
+          </PrivateRoute>
           <Route path="/addservice">
             <AddService></AddService>
           </Route>
+          <Route path="/addreview">
+            <AddReview></AddReview>
+          </Route>
+          <PrivateRoute path="/orderplace/:_id">
+           <OrderPlace></OrderPlace>
+          </PrivateRoute>
           <Route path="*">
             <NotFound></NotFound>
           </Route>

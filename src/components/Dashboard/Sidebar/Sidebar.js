@@ -12,28 +12,28 @@ const Sidebar = () => {
         <div className="sidebar d-flex flex-column justify-content-between col-md-2 py-5 px-4" style={{height:"100vh"}}>
         <ul className="list-unstyled">
             <li>
-                <Link to="/doctor/dashboard" className="text-white">
+                <Link to="/dashboard" className="text-white">
                     <FontAwesomeIcon icon={faGripHorizontal} /> <span>Dashboard</span> 
                 </Link>
             </li>
             <li>
-                <Link to="/doctor/appointment" className="text-white">
-                    <FontAwesomeIcon icon={faCalendar} /> <span>Appointment</span> 
+                <Link to="/" className="text-white">
+                    <FontAwesomeIcon icon={faCalendar} /> <span>Home</span> 
                 </Link>
             </li>
             <li>
-                <Link to="/doctor/patients" className="text-white">
-                    <FontAwesomeIcon icon={faUsers} /> <span>Patients</span>
+                <Link to="addreview" className="text-white">
+                    <FontAwesomeIcon icon={faUsers} /> <span>Add Riview</span>
                 </Link>
             </li>
             <li>
-                <Link to="/doctor/prescriptions" className="text-white">
+                <Link to="/addservice" className="text-white">
                     <FontAwesomeIcon icon={faFileAlt} /> <span>Add Service</span>
                 </Link>
             </li>
             <li>
-                <Link to="/doctor/setting" className="text-white" >
-                  <FontAwesomeIcon icon={faCog} /> <span>Setting</span>
+                <Link to="orderplace" className="text-white" >
+                  <FontAwesomeIcon icon={faCog} /> <span>Order list</span>
                 </Link>
             </li>
         </ul>

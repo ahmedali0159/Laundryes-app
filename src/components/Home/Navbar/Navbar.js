@@ -19,12 +19,7 @@ const Navbar = () => {
               <li className="nav-item">
                 <Link to="/" className="nav-link  text-darkColor" aria-current="page">Home</Link>
               </li>
-              <li className="nav-item">
-                <Link to="/services" className="nav-link text-darkColor">Services</Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/bookNow" className="nav-link text-darkColor">Book Now</Link>
-              </li>
+              
               <li className="nav-item">
                 <Link to="/testimonials" className="nav-link text-darkColor">Testimonials</Link>
               </li>
@@ -32,7 +27,7 @@ const Navbar = () => {
                 <Link to="/dashboard" className="nav-link text-darkColor">Dashboard</Link>
               </li>
               <li className="nav-item">
-                <Link to="/admin" className="nav-link text-darkColor">Admin</Link>
+                <Link to="/dashboard" className="nav-link text-darkColor">Admin</Link>
               </li>
               <li className="nav-item">
               <button className="button-color"> <Link style={{textDecoration:"none"}} to="login" >{loggedInUser.email ? loggedInUser.name|| loggedInUser.email : "Login"}</Link></button>    

@@ -11,7 +11,7 @@ const AddService = () => {
             const serviceData = {
                 name:service.name,
                 imageURL: imageURL,
-               // price:data.price
+                price:service.price
             }
             const url = (`http://localhost:5000/addservice`);
         console.log(serviceData);

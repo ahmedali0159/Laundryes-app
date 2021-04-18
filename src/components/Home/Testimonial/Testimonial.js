@@ -1,31 +1,16 @@
-import React from 'react';
-import zenith from '../../../images/zenith.jpg';
-import morgan from '../../../images/morgan.jpg';
-import jessica from '../../../images/jessica.jpg';
+import React, { useEffect, useState } from 'react';
 import TestifonialInfo from '../TestimonialInfo/TestifonialInfo';
 
-const testimonialData = [
-    {
-        quote : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic non architecto nobis, adipisci recusandae repellat accusantium consequuntur, qui nisi deserunt blanditiis mollitia, illo! ',
-        name : 'Youth Zenith',
-        customer: 'Customer',
-        img : zenith
-    },
-    {
-        quote : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic non architecto nobis, adipisci recusandae repellat accusantium consequuntur, qui nisi deserunt blanditiis mollitia, illo! ',
-        name : 'Morgan Hills',
-        customer : 'Customer',
-        img : morgan
-    },
-    {
-        quote : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic non architecto nobis, adipisci recusandae repellat accusantium consequuntur, qui nisi deserunt blanditiis mollitia, illo! ',
-        name : 'Jessica Febrina',
-        customer : 'Customer',
-        img : jessica
-    }
-]
+   
 
 const Testimonial = () => {
+    const [reviews, setReviews] = useState([]);
+
+    useEffect(() =>{
+        fetch('http://localhost:5000/reviews')
+        .then(res => res.json())
+        .then(data => setReviews(data));
+    }, [setReviews])
     return (
        <section className="testimonials my-5 py-5">
            <div className="container">
@@ -35,7 +20,7 @@ const Testimonial = () => {
                </div>
                <div className=" mt-5 row">
                    {
-                       testimonialData.map(testimonial => <TestifonialInfo testimonial={testimonial} key={testimonial.name}></TestifonialInfo>)
+                       reviews.map(testimonial => <TestifonialInfo testimonial={testimonial}></TestifonialInfo>)
                    }
                </div>
            </div>
