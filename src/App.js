@@ -9,13 +9,14 @@ import './App.css';
 import AddReview from "./components/AddReview/AddReview";
 import AddService from "./components/AddService/AddService";
 import Dashboard from "./components/Dashboard/Dashboard/Dashboard";
+import OrderPlace from "./components/Dashboard/OrderPlace/OrderPlace";
 import Home from './components/Home/Home/Home';
 import Navbar from "./components/Home/Navbar/Navbar";
 import Login from './components/Login/Login/Login';
 import PrivateRoute from "./components/Login/PrivateRoute/PrivateRoute";
 
 import NotFound from "./components/NotFound/NotFound";
-import OrderPlace from "./components/OrderPlace/OrderPlace";
+
 
 
 

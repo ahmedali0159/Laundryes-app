@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { UserContext } from '../../App';
-import Sidebar from '../Dashboard/Sidebar/Sidebar';
+import { UserContext } from '../../../App';
+import Sidebar from '../Sidebar/Sidebar';
 
 const OrderPlace = () => {
     const {id} = useParams();
@@ -12,20 +12,24 @@ const OrderPlace = () => {
     console.log(service);
 
     useEffect(()=> {
-        fetch(`http://localhost:5000/service/${id}`)
+        fetch(`https://damp-dawn-17612.herokuapp.com/service/${id}`)
         .then(res => res.json())
         .then(data => setService(data));
     }, [])
     return (
        <div>
-          <div className="col-md-3">
            <Sidebar></Sidebar>
-           </div>
-         <div className="col-md-9 ms-auto">
+         <div className="type-input main">
+           <h2>Book</h2>
          <input value={service.name} className="form-control " disabled="disabled"/>
+         <br/>
           <input value={loggedInUser.name} className="form-control " disabled="disabled"/>
+          <br/>
           <input value={loggedInUser.email} className="form-control" disabled="disabled"/>
+          <br/>
           <input value={service.price} className="form-control " disabled="disabled"/>
+          <br/>
+          <button className="button-color">Order Now</button>
          </div>
 
        </div>
