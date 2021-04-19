@@ -32,8 +32,13 @@ const Sidebar = () => {
                 </Link>
             </li>
             <li>
-                <Link to="/orderplace" className="text-white" >
-                  <FontAwesomeIcon icon={faList} /> <span>Order list</span>
+                <Link to="/dashboard" className="text-white" >
+                  <FontAwesomeIcon icon={faList} /> <span>Order List</span>
+                </Link>
+            </li>
+            <li>
+                <Link to="/manageService" className="text-white" >
+                  <FontAwesomeIcon icon={faList} /> <span>Manage Service</span>
                 </Link>
             </li>
         </ul>

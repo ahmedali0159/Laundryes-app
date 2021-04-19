@@ -1,15 +1,19 @@
 import React, { useContext } from 'react';
 import { UserContext } from '../../../App';
 import Sidebar from '../../Dashboard/Sidebar/Sidebar';
+import OrderList from '../../Dashboard/OrderList/OrderList';
+
+
 
 
 const Dashboard = () => {
-    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+
     
     return (
         <div>
-            <Sidebar></Sidebar>
-            
+          <Sidebar></Sidebar>
+          <OrderList/>
+
         </div>
     );
 };

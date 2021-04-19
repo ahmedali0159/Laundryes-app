@@ -9,12 +9,13 @@ import './App.css';
 import AddReview from "./components/AddReview/AddReview";
 import AddService from "./components/AddService/AddService";
 import Dashboard from "./components/Dashboard/Dashboard/Dashboard";
+import ManageService from "./components/Dashboard/ManageService/ManageService";
 import OrderPlace from "./components/Dashboard/OrderPlace/OrderPlace";
+import Sidebar from "./components/Dashboard/Sidebar/Sidebar";
 import Home from './components/Home/Home/Home';
 import Navbar from "./components/Home/Navbar/Navbar";
 import Login from './components/Login/Login/Login';
 import PrivateRoute from "./components/Login/PrivateRoute/PrivateRoute";
-
 import NotFound from "./components/NotFound/NotFound";
 
 
@@ -52,6 +53,10 @@ function App() {
           <PrivateRoute path="/orderplace/:id">
            <OrderPlace></OrderPlace>
           </PrivateRoute>
+          <Route path="/manageService">
+            <Sidebar></Sidebar>
+            <ManageService></ManageService>
+          </Route>
           <Route path="*">
             <NotFound></NotFound>
           </Route>
