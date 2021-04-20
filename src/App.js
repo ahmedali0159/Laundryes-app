@@ -6,6 +6,7 @@ import {
   Route,
 } from "react-router-dom";
 import './App.css';
+import AboutUs from "./components/AboutUs/AboutUs";
 import AddReview from "./components/AddReview/AddReview";
 import AddService from "./components/AddService/AddService";
 import Dashboard from "./components/Dashboard/Dashboard/Dashboard";
@@ -56,6 +57,9 @@ function App() {
           <Route path="/manageService">
             <Sidebar></Sidebar>
             <ManageService></ManageService>
+          </Route>
+          <Route path="/aboutUs">
+            <AboutUs></AboutUs>
           </Route>
           <Route path="*">
             <NotFound></NotFound>

@@ -8,7 +8,13 @@ const OrderList = () => {
     const [loggedInUser, setLoggedInUser]  = useContext(UserContext);
 
     useEffect(() =>{
-        fetch('https://damp-dawn-17612.herokuapp.com/orders')
+        fetch('https://damp-dawn-17612.herokuapp.com/orders?email='+loggedInUser.email,{
+            method: 'GET',
+            headers:{
+                'Content-Type':'application/json',
+                authorization: `Bearer ${sessionStorage.getItem('token')}`
+            }
+        })
         .then(res => res.json())
         .then(data => setLists(data));
     }, [])

@@ -17,7 +17,7 @@ const OrderPlace = () => {
     useEffect(()=> {
         fetch(`https://damp-dawn-17612.herokuapp.com/service/${id}`)
         .then(res => res.json())
-        .then(data => setService(data));
+        .then(data => setService(data[0]));
     }, [])
 
     const handleOrder = () => {
@@ -52,7 +52,7 @@ const OrderPlace = () => {
           
          
           <br/>
-        <Link to="/dashboard"> <button onClick={handleOrder} className="button-color">Pay</button></Link>
+        <Link to="/dashboard"> <button onClick={handleOrder} className="button-color">Order</button></Link>
         
         </div>
        
