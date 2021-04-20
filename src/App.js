@@ -10,6 +10,7 @@ import AboutUs from "./components/AboutUs/AboutUs";
 import AddReview from "./components/AddReview/AddReview";
 import AddService from "./components/AddService/AddService";
 import Dashboard from "./components/Dashboard/Dashboard/Dashboard";
+import MakeAdmin from "./components/Dashboard/MakeAdmin/MakeAdmin";
 import ManageService from "./components/Dashboard/ManageService/ManageService";
 import OrderPlace from "./components/Dashboard/OrderPlace/OrderPlace";
 import Sidebar from "./components/Dashboard/Sidebar/Sidebar";
@@ -47,6 +48,9 @@ function App() {
           </PrivateRoute>
           <Route path="/addservice">
             <AddService></AddService>
+          </Route>
+          <Route path="/admin">
+            <MakeAdmin></MakeAdmin>
           </Route>
           <Route path="/addreview">
             <AddReview></AddReview>
