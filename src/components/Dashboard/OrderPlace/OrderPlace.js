@@ -21,7 +21,8 @@ const OrderPlace = () => {
     }, [])
 
     const handleOrder = () => {
-      const newOrdered = {...loggedInUser, ...service}
+      const newOrdered = {...loggedInUser, name:service.name, price:service.price, imageURL:service.imageURL}
+      console.log(newOrdered);
       fetch('https://damp-dawn-17612.herokuapp.com/addorders', {
     method:"POST",
     headers: {
